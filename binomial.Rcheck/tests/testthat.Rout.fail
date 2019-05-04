@@ -1,0 +1,34 @@
+
+R version 3.5.2 (2018-12-20) -- "Eggshell Igloo"
+Copyright (C) 2018 The R Foundation for Statistical Computing
+Platform: x86_64-apple-darwin15.6.0 (64-bit)
+
+R is free software and comes with ABSOLUTELY NO WARRANTY.
+You are welcome to redistribute it under certain conditions.
+Type 'license()' or 'licence()' for distribution details.
+
+R is a collaborative project with many contributors.
+Type 'contributors()' for more information and
+'citation()' on how to cite R or R packages in publications.
+
+Type 'demo()' for some demos, 'help()' for on-line help, or
+'help.start()' for an HTML browser interface to help.
+Type 'q()' to quit R.
+
+> library(testthat)
+> library(binomial)
+> 
+> test_check("binomial")
+[31m──[39m [31m1. Failure: testing for check_trials (@test-checkers.R#12) [39m [31m─[39m
+`check_trials("hello")` did not throw an error.
+
+[31m──[39m [31m2. Failure: testing for check_success (@test-checkers.R#18) [39m 
+`check_success(0, 0)` did not throw an error.
+
+══ testthat results  ═══════════════════════════════════════════
+OK: 10 SKIPPED: 0 WARNINGS: 0 FAILED: 2
+1. Failure: testing for check_trials (@test-checkers.R#12) 
+2. Failure: testing for check_success (@test-checkers.R#18) 
+
+Error: testthat unit tests failed
+Execution halted

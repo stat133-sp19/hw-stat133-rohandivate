@@ -1,0 +1,139 @@
+* using log directory ‘/Users/rohandivate/Desktop/hw-stat133/binomial.Rcheck’
+* using R version 3.5.2 (2018-12-20)
+* using platform: x86_64-apple-darwin15.6.0 (64-bit)
+* using session charset: UTF-8
+* using options ‘--no-manual --as-cran’
+* checking for file ‘binomial/DESCRIPTION’ ... OK
+* checking extension type ... Package
+* this is package ‘binomial’ version ‘0.1.0’
+* package encoding: UTF-8
+* checking package namespace information ... OK
+* checking package dependencies ... OK
+* checking if this is a source package ... OK
+* checking if there is a namespace ... OK
+* checking for executable files ... OK
+* checking for hidden files and directories ... OK
+* checking for portable file names ... OK
+* checking for sufficient/correct file permissions ... OK
+* checking serialization versions ... OK
+* checking whether package ‘binomial’ can be installed ... OK
+* checking installed package size ... OK
+* checking package directory ... OK
+* checking DESCRIPTION meta-information ... WARNING
+Non-standard license specification:
+  What license is it under?
+Standardizable: FALSE
+* checking top-level files ... OK
+* checking for left-over files ... OK
+* checking index information ... OK
+* checking package subdirectories ... OK
+* checking R files for non-ASCII characters ... OK
+* checking R files for syntax errors ... OK
+* checking whether the package can be loaded ... OK
+* checking whether the package can be loaded with stated dependencies ... OK
+* checking whether the package can be unloaded cleanly ... OK
+* checking whether the namespace can be loaded with stated dependencies ... OK
+* checking whether the namespace can be unloaded cleanly ... OK
+* checking dependencies in R code ... OK
+* checking S3 generic/method consistency ... WARNING
+print:
+  function(x, ...)
+print.binvar:
+  function(x)
+
+print:
+  function(x, ...)
+print.summary.binvar:
+  function(sum_binvar)
+
+summary:
+  function(object, ...)
+summary.binvar:
+  function(bin_var)
+
+plot:
+  function(x, ...)
+plot.bincum:
+  function(dist_table)
+
+plot:
+  function(x, ...)
+plot.bindis:
+  function(dist_table)
+
+See section ‘Generic functions and methods’ in the ‘Writing R
+Extensions’ manual.
+
+Found the following apparent S3 methods exported but not registered:
+  plot.bincum plot.bindis print.binvar print.summary.binvar
+  summary.binvar
+See section ‘Registering S3 methods’ in the ‘Writing R Extensions’
+manual.
+* checking replacement functions ... OK
+* checking foreign function calls ... OK
+* checking R code for possible problems ... NOTE
+plot.bincum: no visible global function definition for ‘plot’
+plot.bindis: no visible global function definition for ‘barplot’
+Undefined global functions or variables:
+  barplot plot
+Consider adding
+  importFrom("graphics", "barplot", "plot")
+to your NAMESPACE file.
+* checking Rd files ... OK
+* checking Rd metadata ... OK
+* checking Rd line widths ... OK
+* checking Rd cross-references ... OK
+* checking for missing documentation entries ... WARNING
+Undocumented code objects:
+  ‘aux_kurtosis’ ‘aux_mean’ ‘aux_mode’ ‘aux_skewness’ ‘aux_variance’
+  ‘bin_choose’ ‘bin_cumulative’ ‘bin_distribution’ ‘bin_kurtosis’
+  ‘bin_mean’ ‘bin_mode’ ‘bin_probability’ ‘bin_skewness’ ‘bin_variable’
+  ‘bin_variance’ ‘check_prob’ ‘check_success’ ‘check_trials’
+  ‘plot.bincum’ ‘plot.bindis’ ‘print.binvar’ ‘print.summary.binvar’
+  ‘summary.binvar’
+All user-level objects in a package should have documentation entries.
+See chapter ‘Writing R documentation files’ in the ‘Writing R
+Extensions’ manual.
+* checking for code/documentation mismatches ... WARNING
+Functions or methods with usage in documentation object 'hello' but not in code:
+  hello
+
+* checking Rd \usage sections ... OK
+* checking Rd contents ... OK
+* checking for unstated dependencies in examples ... OK
+* checking examples ... ERROR
+Running examples in ‘binomial-Ex.R’ failed
+The error most likely occurred in:
+
+> base::assign(".ptime", proc.time(), pos = "CheckExEnv")
+> ### Name: hello
+> ### Title: Hello, World!
+> ### Aliases: hello
+> 
+> ### ** Examples
+> 
+> hello()
+Error in hello() : could not find function "hello"
+Execution halted
+* checking for unstated dependencies in ‘tests’ ... OK
+* checking tests ... ERROR
+  Running ‘testthat.R’
+Running the tests in ‘tests/testthat.R’ failed.
+Last 13 lines of output:
+  > 
+  > test_check("binomial")
+  [31m──[39m [31m1. Failure: testing for check_trials (@test-checkers.R#12) [39m [31m─[39m
+  `check_trials("hello")` did not throw an error.
+  
+  [31m──[39m [31m2. Failure: testing for check_success (@test-checkers.R#18) [39m 
+  `check_success(0, 0)` did not throw an error.
+  
+  ══ testthat results  ═══════════════════════════════════════════
+  OK: 10 SKIPPED: 0 WARNINGS: 0 FAILED: 2
+  1. Failure: testing for check_trials (@test-checkers.R#12) 
+  2. Failure: testing for check_success (@test-checkers.R#18) 
+  
+  Error: testthat unit tests failed
+  Execution halted
+* DONE
+Status: 2 ERRORs, 4 WARNINGs, 1 NOTE

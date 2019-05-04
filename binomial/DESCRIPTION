@@ -1,0 +1,18 @@
+Package: binomial
+Type: Package
+Title: Binomial Distribution
+Version: 0.1.0
+Author: Rohan Divate
+Maintainer: Rohan Divate <rdivate@berkeley.edu>
+Description: A package that lets you compute probabilities for the binomial distribution
+    and functions that let you visualize the distribution
+License: GPL-3
+Encoding: UTF-8
+LazyData: true
+Collate:
+    binomial.R
+RoxygenNote: 6.1.1
+Suggests: knitr,
+    rmarkdown,
+    testthat
+VignetteBuilder: knitr

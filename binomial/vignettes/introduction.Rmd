@@ -1,0 +1,90 @@
+---
+title: "Introduction to Binomial"
+author: "Rohan Divate"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Introduction to binomial}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r, echo = FALSE, message=FALSE}
+knitr::opts_chunk$set(collapse = T, comment = "#>")
+library(binomial)
+```
+
+## Binomial Distribution
+
+The package binomial is a package that lets you compute the binomial distribution for a given number of trials, a given probability, and a given number of successes. The binomial package gives a visualization of the distribution in a table and in graph formats.
+
+## Computing probability with the binomial distribution 
+
+If you want to calculate the probability of x number of successes in y number of trials with a probability of success p for each trial, you can do so by using the bin_probability function.
+
+```{r}
+bin_probability(4,10,0.5)
+```
+
+## Distribution
+
+If you want to compute a binomial distribution with a range of success values, you can use the bin_distribution function. 
+
+```{r}
+bin_distribution(trials = 5, prob = 0.5)
+```
+
+## Cumulative
+
+You can also get the cumulative distribution of values by using the bin_cumulative function.
+
+```{r}
+bin_cumulative(5, 0.5)
+```
+
+
+## Visualizing the distribution
+
+Once you have a binomial distribution using bin_distribution, you can visualize the binomial distribution in a bar graph by using the plot function.
+
+```{r}
+bin <- bin_distribution(trials = 5, prob = 0.5)
+plot(bin)
+```
+
+## Visualizing the cumulative distribution
+
+Once you have a cumulative distribution object using bin_cumulative, you can visualize it by using plot.
+
+```{r}
+bin2 <- bin_cumulative(10, 0.2)
+plot(bin2)
+```
+
+## Binomial Variable Object
+
+You can also work with a binomial variable object using this package. You can create a binvar object by using bin_variable.
+
+```{r}
+binv <- bin_variable(10, 0.4)
+binv
+```
+
+
+The summary function also gives an output of the different statistics of the distribution.
+
+```{r}
+summary(binv)
+```
+
+## Functions of measures
+
+Additionally, the package includes different statistic functions that you can use. The functions include the mean, variance, mode, skewness, and kurtosis of a given distribution
+
+```{r}
+bin_mean(20, 0.3)
+bin_variance(20, 0.3)
+bin_mode(20, 0.3)
+bin_skewness(20, 0.3)
+bin_kurtosis(20, 0.3)
+```
+
